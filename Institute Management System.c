@@ -1,6 +1,11 @@
+//This project for school and College students
+
+//Header Files
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+//Functions
 void appdet();
 void signup();
 void login();
@@ -11,10 +16,14 @@ void iot();
 void ai();
 void stu_co_db();
 void detl();
+
+//Global variables
 int lgs=0;
 int opt=0;
 char mbno[20], username[100],payment[20],coursename[100];
 char password[20];
+
+//Main Function
 void main()
 {
         int choice;
@@ -113,6 +122,8 @@ void main()
             printf("\n\n\t\t\t\t\t\tThank You");
         }
   }
+
+//Append the Students Details stu_details.csv
 void appdet()
 
 {
@@ -168,6 +179,8 @@ void appdet()
     }
 
 }
+
+//Sign up to Create Account
 void signup()
 
 {
@@ -193,6 +206,8 @@ void signup()
     appdet();
 
 }
+
+//Login to Select the Course
 void login()
 {
     char file_username[100], file_password[100];
@@ -270,7 +285,7 @@ void login()
         goto log;
     }
 }
-
+// To view Student Database Only for Admin
 void stu_db()
 {
 
@@ -291,6 +306,7 @@ void stu_db()
         fclose(file);
     }
 }
+//Loading
 void loading()
 {
 char a[15]={'(','L','o','a','d','i','n','g','.','.','.',')'};
@@ -502,7 +518,7 @@ void ai(){
     detl();
 }
 
-
+// To view Student Course Detail Database Only for Admin
 void stu_co_db(){
 
     FILE *file = fopen("course_details.csv", "r");
@@ -530,6 +546,7 @@ printf("\n\n\t\t\tPhone +91 80 4121 6422\n\n\t\t\tMobile +91 98869 20008\n\n\t\t
 printf("\n\n\t\t\t\t\t\t*******************\t\t\t\t");
 
 }
+//Take the Password and Print *
 void takepassword(char password[20])
 {
     int i=0;
